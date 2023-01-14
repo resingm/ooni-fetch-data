@@ -33,27 +33,27 @@ static TS: &str = "measurement_start_time";
 pub struct Measurement {
     // Timeseries data & pivoting
     ts: DateTime<Utc>,
-    fqdn: String,
+    fqdn: String,           // categorical
     report_id: String,
     input: String,
     digest: String,
 
     test_start_time: DateTime<Utc>,
     test_runtime: f64,
-    test_version: String,
+    test_version: String,   // categorical
 
     // Annotation fields
-    architecture: String,
-    engine_name: String,
-    engine_version: String,
-    flavor: String,
-    network_type: String,
-    origin: String,
-    platform: String,
+    architecture: String,   // categorical
+    engine_name: String,    // categorical
+    engine_version: String, // categorical
+    flavor: String,         // categorical
+    network_type: String,   // categorical
+    origin: String,         // categorical
+    platform: String,       // categorical
 
     // Probe
     probe_asn: String,
-    probe_cc: String,
+    probe_cc: String,       // categorical
     probe_ip: String,
     probe_network_name: String,
 
@@ -61,7 +61,6 @@ pub struct Measurement {
     resolver_asn: String,
     resolver_ip: String,
     resolver_network_name: String,
-
 }
 
 impl Measurement {
